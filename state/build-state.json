@@ -4,11 +4,12 @@
   "documentation_repository": "TQ02/invigorate-hubspot-icp-agent",
   "target_portal_name": "LeadHubAI - Demo client portal",
   "target_portal_id": "verified-redacted",
-  "current_phase": 3,
+  "current_phase": 4,
   "completed_phases": [
     0,
     1,
-    2
+    2,
+    3
   ],
   "preflight": {
     "portal_name_verified": true,
