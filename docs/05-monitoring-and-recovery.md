@@ -7,6 +7,7 @@ Review five recent runs plus every Failed and Pending review record.
 Inspect:
 
 - source authority and freshness;
+- attached knowledge-vault name, both canonical rule files, and stamped rules version;
 - confidence distribution;
 - blank or malformed outputs;
 - branch distribution;
@@ -21,11 +22,13 @@ The workflow routes failures, low confidence, missing values and unexpected bran
 ## Recovery
 
 1. Keep or return the workflow to inactive if systemic risk exists.
-2. Identify whether the issue is source quality, agent output, mapping, branch logic, permission, credit limit, or HubSpot availability.
-3. Correct the smallest safe component.
-4. Reset only the affected `[TEST]` record.
-5. Run one recovery test.
-6. Verify close-out and request reset.
-7. Repeat the five-company regression after material changes.
+2. Verify the agent still has access to both approved files in `Invigorate OS — ICP & Signal Rules V1`.
+3. Identify whether the issue is knowledge availability, source quality, agent output, mapping, branch logic, permission, credit limit, or HubSpot availability.
+4. Correct the smallest safe component.
+5. Reset only the affected `[TEST]` record.
+6. Run the inactive simulation for structural verification.
+7. Run one real recovery test through deliberate No-to-Yes enrollment.
+8. Verify close-out and request reset.
+9. Repeat the five-company regression after material changes.
 
 Never bulk-reset or re-enroll production records.

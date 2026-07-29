@@ -7,4 +7,6 @@ Canonical source: https://github.com/TQ02/invigorate-hubspot-icp-agent/blob/main
 
 Status: Not production approved.
 
-The build is restricted to the demo developer portal and controlled `[TEST]` companies. Production approval requires completed agent and workflow configuration, all regression tests, rerun safety, monitoring ownership, security review and explicit human acceptance.
+The build is restricted to the demo developer portal and controlled `[TEST]` companies. The canonical rule files still require upload to `Invigorate OS — ICP & Signal Rules V1`, attachment to the agent and access verification. Workflow Test is simulation-only.
+
+Production approval requires a real restricted Case 1 enrollment after safe activation, all regression tests, rerun safety, monitoring ownership, security review and explicit human acceptance.

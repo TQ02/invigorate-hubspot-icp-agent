@@ -19,7 +19,9 @@ The workflow will be built and tested in the **LeadHubAI - Demo client portal** 
 
 Phases 0–4 are complete. The correct developer-test portal and integrations are verified, the V1 scoring contracts are canonical, and all fourteen test-labelled HubSpot company properties exist with verified types and options.
 
-Five controlled test companies and all six Notion operating pages are prepared and verified. Agent execution is blocked pending one AI Settings toggle, and Agent Builder plus `Run agent` configuration are UI-only with the currently connected MCP. Complete `docs/09-consolidated-hubspot-ui-checklist.md`, then resume with the single-record runtime test.
+Five controlled test companies and all six Notion operating pages are prepared and verified. Agent execution is blocked pending Files data, creation and attachment of `Invigorate OS — ICP & Signal Rules V1`, and the UI-only Agent Builder plus `Run agent` configuration. GitHub rule files are canonical but are not automatically available to the HubSpot agent.
+
+Complete `docs/09-consolidated-hubspot-ui-checklist.md`: first verify the inactive simulation, then activate only the restricted test workflow with no-existing-record enrollment and deliberately request Case 1. HubSpot's Test feature does not execute the agent or write properties.
 
 ## Current versions
 

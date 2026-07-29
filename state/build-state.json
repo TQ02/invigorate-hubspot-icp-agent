@@ -82,6 +82,11 @@
       "reason": "HubSpot Agent Hub requires Files data to be enabled before agents can be used."
     },
     {
+      "id": "create-and-attach-rules-knowledge-vault",
+      "status": "pending",
+      "reason": "The approved GitHub Markdown rules must be downloaded, uploaded to Invigorate OS — ICP & Signal Rules V1, attached to the agent, and verified before publication."
+    },
+    {
       "id": "configure-agent-in-ui",
       "status": "pending",
       "reason": "Agent Builder operations are not exposed through the connected HubSpot MCP."
@@ -90,6 +95,16 @@
       "id": "configure-run-agent-action-in-ui",
       "status": "pending",
       "reason": "The Run agent workflow action and structured outputs are not exposed through the connected HubSpot MCP."
+    },
+    {
+      "id": "simulate-inactive-workflow",
+      "status": "pending",
+      "reason": "HubSpot Test must verify structure and predicted paths, but it does not execute actions."
+    },
+    {
+      "id": "run-real-case-1-after-safe-activation",
+      "status": "pending",
+      "reason": "Runtime evidence requires turning on the restricted workflow with no-existing-record enrollment, then changing only Case 1 from requested No to Yes."
     }
   ],
   "blockers": [
@@ -125,6 +140,29 @@
     "agent_runtime_configured": false,
     "workflow_runtime_configured": false,
     "five_company_regression_complete": false
+  },
+  "current_behavior_corrections": {
+    "reviewed_against_official_hubspot_docs": true,
+    "review_date": "2026-07-29",
+    "official_references": [
+      "https://knowledge.hubspot.com/ai/manage-breeze-context-with-knowledge-vaults",
+      "https://knowledge.hubspot.com/workflows/test-your-workflow",
+      "https://knowledge.hubspot.com/workflows/create-workflows"
+    ],
+    "knowledge_vault_required": true,
+    "knowledge_vault_name": "Invigorate OS — ICP & Signal Rules V1",
+    "knowledge_vault_created": false,
+    "approved_rule_files": [
+      "config/icp-rules-v1.md",
+      "config/signal-rules-v1.md"
+    ],
+    "github_files_automatically_available_to_agent": false,
+    "workflow_test_executes_actions": false,
+    "inactive_simulation_required": true,
+    "real_case_1_runtime_required": true,
+    "real_case_1_runtime_complete": false,
+    "github_documentation_corrected": true,
+    "notion_summaries_corrected_and_verified": true
   },
   "last_updated": "2026-07-29"
 }

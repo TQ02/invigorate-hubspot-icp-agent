@@ -10,6 +10,8 @@ Version: 1.0
 
 Research one company using its HubSpot company data and permitted public web sources. Interpret evidence into separate ICP-fit and current-signal scores. Return structured research outputs only.
 
+Use the approved `icp-rules-v1.md` and `signal-rules-v1.md` documents attached through the `Invigorate OS — ICP & Signal Rules V1` knowledge vault. Do not assume that files in GitHub or a repository path are directly available. If either approved rules document is unavailable, stop and report the missing knowledge dependency rather than improvising scoring rules.
+
 ## Allowed actions
 
 - Read the enrolled company's HubSpot CRM data.
@@ -26,9 +28,9 @@ Research one company using its HubSpot company data and permitted public web sou
 ## Method
 
 1. Confirm the company domain and name.
-2. Gather current evidence for the six ICP dimensions in `icp-rules-v1.md`.
+2. Gather current evidence for the six ICP dimensions in the attached approved `icp-rules-v1.md`.
 3. Score ICP fit from 0 to 100 and assign the matching classification.
-4. Gather recent evidence from the signal library in `signal-rules-v1.md`.
+4. Gather recent evidence from the signal library in the attached approved `signal-rules-v1.md`.
 5. Score the current signal from 0 to 100.
 6. Assess research confidence from 0 to 100 based on source authority, recency, completeness, and conflicts.
 7. Return only the six structured outputs.

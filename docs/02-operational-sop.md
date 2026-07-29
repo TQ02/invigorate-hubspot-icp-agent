@@ -1,12 +1,24 @@
 # Operational SOP
 
+## Knowledge prerequisite
+
+GitHub is the canonical source for `config/icp-rules-v1.md` and `config/signal-rules-v1.md`, but those files are not automatically available to the HubSpot agent. Before publishing or republishing the agent:
+
+1. Enable Files data.
+2. Download both current approved Markdown files from GitHub.
+3. Upload them to `Invigorate OS — ICP & Signal Rules V1`.
+4. Attach that knowledge vault to `Invigorate OS — ICP & Signal Research Agent V1`.
+5. Verify the agent can access both documents.
+6. Record the vault name and rules version in private Notion.
+
 ## Request research
 
 1. Confirm the company is a controlled test record during validation.
 2. Confirm a usable company domain exists.
-3. Confirm current outputs have been reviewed or intentionally superseded.
-4. Set `AI research requested` to Yes.
-5. Monitor status until Complete, Pending review, or Failed.
+3. Confirm the published agent has the approved knowledge vault and rule versions.
+4. Confirm current outputs have been reviewed or intentionally superseded.
+5. Set `AI research requested` to Yes.
+6. Monitor status until Complete, Pending review, or Failed.
 
 ## Interpret outcomes
 
@@ -25,4 +37,4 @@ Correct the source record or configuration, confirm the workflow is safe, then c
 
 ## Stop conditions
 
-Stop and escalate on non-test enrollment, wrong portal, unexpected credit use, direct agent CRM writes, incomplete property mapping, or evidence that a workflow branch can affect unrelated records.
+Stop and escalate on missing or stale vault files, non-test enrollment, wrong portal, unexpected credit use, direct agent CRM writes, incomplete property mapping, or evidence that a workflow branch can affect unrelated records.

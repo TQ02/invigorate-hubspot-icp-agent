@@ -6,6 +6,8 @@ Five exact `[TEST]` company records were created in the verified developer-test 
 
 No record was enrolled and no agent or workflow run occurred. Runtime testing remains blocked until the consolidated HubSpot UI checklist is completed.
 
+The inactive workflow Test feature may be used for structural simulation, but it will not execute the agent or any workflow action and will not provide runtime evidence. The first real evidence must come from activating the restricted workflow with no-existing-record enrollment selected, then changing only Case 1 from requested = No to Yes.
+
 The post-write company audit window returned exactly these five `[TEST]` records and no non-test company changes.
 
 No HubSpot record IDs, private CRM data, or screenshots are stored here.

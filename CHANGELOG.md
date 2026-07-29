@@ -22,6 +22,10 @@ All material changes to the agent, scoring rules, HubSpot properties, workflow, 
 - Advanced build state through the repository-foundation phase.
 - Advanced build state through the HubSpot property-creation phase.
 - Expanded the local MCP property schema to support the number, datetime, text, date and number field types required by the approved contract.
+- Required the approved ICP and signal Markdown files to be uploaded to `Invigorate OS — ICP & Signal Rules V1`, attached to the agent, verified before publication, and version-recorded in private Notion.
+- Separated inactive workflow simulation from the real Case 1 runtime test and documented safe activation with no-existing-record enrollment.
 
 ### Fixed
 - Added explicit `true` and `false` options required by HubSpot for the research-request checkbox.
+- Removed the incorrect implication that GitHub files are automatically available to a HubSpot agent.
+- Removed the incorrect implication that HubSpot workflow Test executes agent or workflow actions.
