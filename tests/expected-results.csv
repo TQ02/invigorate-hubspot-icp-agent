@@ -1,0 +1,6 @@
+case_id,test_company_label,scenario,expected_priority,expected_status,minimum_confidence,notes
+1,[TEST] ICP Signal Case 1,Ideal ICP plus strong current signal,Prioritise,Complete,60,Run first and verify end to end
+2,[TEST] ICP Signal Case 2,Ideal ICP with no meaningful current signal,Monitor,Complete,60,Primary signal should use standard no-signal statement when appropriate
+3,[TEST] ICP Signal Case 3,Moderate fit plus strong signal,Review,Pending review,60,Strong timing must not override moderate fit
+4,[TEST] ICP Signal Case 4,Poor fit,Exclude,Complete,60,Signal cannot repair poor fit
+5,[TEST] ICP Signal Case 5,Incomplete or conflicting evidence,Review,Pending review,0,Confidence expected below 60 or a required output missing

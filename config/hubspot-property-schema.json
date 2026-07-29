@@ -1,0 +1,126 @@
+{
+  "objectType": "companies",
+  "groupName": "companyinformation",
+  "prefix": "inv_ai_",
+  "properties": [
+    {
+      "name": "inv_ai_icp_score",
+      "label": "AI ICP score",
+      "type": "number",
+      "fieldType": "number",
+      "description": "V1 structural ICP fit score from 0 to 100."
+    },
+    {
+      "name": "inv_ai_signal_score",
+      "label": "AI signal score",
+      "type": "number",
+      "fieldType": "number",
+      "description": "V1 current signal score from 0 to 100."
+    },
+    {
+      "name": "inv_ai_icp_classification",
+      "label": "AI ICP classification",
+      "type": "enumeration",
+      "fieldType": "select",
+      "description": "Classification derived from the AI ICP score.",
+      "options": [
+        {"label": "Ideal", "value": "Ideal"},
+        {"label": "Strong", "value": "Strong"},
+        {"label": "Possible", "value": "Possible"},
+        {"label": "Weak", "value": "Weak"},
+        {"label": "Poor", "value": "Poor"}
+      ]
+    },
+    {
+      "name": "inv_ai_primary_signal",
+      "label": "AI primary signal",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "Most relevant current signal or the standard no-signal statement."
+    },
+    {
+      "name": "inv_ai_qualification_reasoning",
+      "label": "AI qualification reasoning",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "Evidence-based ICP and signal explanation."
+    },
+    {
+      "name": "inv_ai_research_confidence",
+      "label": "AI research confidence",
+      "type": "number",
+      "fieldType": "number",
+      "description": "Research confidence from 0 to 100."
+    },
+    {
+      "name": "inv_ai_account_priority",
+      "label": "AI account priority",
+      "type": "enumeration",
+      "fieldType": "select",
+      "description": "Deterministic workflow result.",
+      "options": [
+        {"label": "Prioritise", "value": "Prioritise"},
+        {"label": "Monitor", "value": "Monitor"},
+        {"label": "Review", "value": "Review"},
+        {"label": "Exclude", "value": "Exclude"}
+      ]
+    },
+    {
+      "name": "inv_ai_research_status",
+      "label": "AI research status",
+      "type": "enumeration",
+      "fieldType": "select",
+      "description": "Research request and execution state.",
+      "options": [
+        {"label": "Not requested", "value": "Not requested"},
+        {"label": "Queued", "value": "Queued"},
+        {"label": "Researching", "value": "Researching"},
+        {"label": "Complete", "value": "Complete"},
+        {"label": "Pending review", "value": "Pending review"},
+        {"label": "Failed", "value": "Failed"}
+      ]
+    },
+    {
+      "name": "inv_ai_research_requested",
+      "label": "AI research requested",
+      "type": "bool",
+      "fieldType": "booleancheckbox",
+      "description": "Controlled enrollment and rerun request."
+    },
+    {
+      "name": "inv_ai_research_completed_date",
+      "label": "AI research completed date",
+      "type": "datetime",
+      "fieldType": "date",
+      "description": "Completion timestamp set by the workflow."
+    },
+    {
+      "name": "inv_ai_agent_version",
+      "label": "AI agent version",
+      "type": "string",
+      "fieldType": "text",
+      "description": "Agent version used for the run."
+    },
+    {
+      "name": "inv_ai_rules_version",
+      "label": "AI rules version",
+      "type": "string",
+      "fieldType": "text",
+      "description": "ICP and signal rules version used for the run."
+    },
+    {
+      "name": "inv_ai_workflow_version",
+      "label": "AI workflow version",
+      "type": "string",
+      "fieldType": "text",
+      "description": "Workflow version used for the run."
+    },
+    {
+      "name": "inv_ai_research_failure_reason",
+      "label": "AI research failure reason",
+      "type": "string",
+      "fieldType": "textarea",
+      "description": "Workflow-controlled failure or unexpected-branch explanation."
+    }
+  ]
+}
