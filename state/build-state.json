@@ -60,8 +60,21 @@
     "companies.inv_ai_research_failure_reason"
   ],
   "hubspot_assets_reused": [],
-  "test_records_created": [],
-  "notion_assets_created": [],
+  "test_records_created": [
+    "[TEST] ICP Signal Case 1",
+    "[TEST] ICP Signal Case 2",
+    "[TEST] ICP Signal Case 3",
+    "[TEST] ICP Signal Case 4",
+    "[TEST] ICP Signal Case 5"
+  ],
+  "notion_assets_created": [
+    "Invigorate OS — System Overview",
+    "Invigorate OS — Operating SOP",
+    "Invigorate OS — Monitoring & Regression",
+    "Invigorate OS — Change Requests & Known Issues",
+    "Invigorate OS — Production Audit Evidence",
+    "Invigorate OS — Production Deployment Status"
+  ],
   "manual_steps_required": [
     {
       "id": "enable-files-data",
@@ -102,6 +115,16 @@
     "enum_option_readback_passed": true,
     "test_labels_applied": true,
     "duplicate_safe_rerun_passed": true
+  },
+  "automation_progress": {
+    "test_records_prepared": true,
+    "test_records_executed": false,
+    "notion_pages_created_and_verified": true,
+    "consolidated_ui_checklist_ready": true,
+    "post_write_non_test_company_changes": 0,
+    "agent_runtime_configured": false,
+    "workflow_runtime_configured": false,
+    "five_company_regression_complete": false
   },
   "last_updated": "2026-07-29"
 }

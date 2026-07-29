@@ -19,7 +19,7 @@ The workflow will be built and tested in the **LeadHubAI - Demo client portal** 
 
 Phases 0–4 are complete. The correct developer-test portal and integrations are verified, the V1 scoring contracts are canonical, and all fourteen test-labelled HubSpot company properties exist with verified types and options.
 
-Agent execution is blocked pending one AI Settings toggle, and Agent Builder plus `Run agent` configuration are UI-only with the currently connected MCP. See `docs/00-phase-0-preflight.md`.
+Five controlled test companies and all six Notion operating pages are prepared and verified. Agent execution is blocked pending one AI Settings toggle, and Agent Builder plus `Run agent` configuration are UI-only with the currently connected MCP. Complete `docs/09-consolidated-hubspot-ui-checklist.md`, then resume with the single-record runtime test.
 
 ## Current versions
 

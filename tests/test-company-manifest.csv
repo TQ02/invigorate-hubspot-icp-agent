@@ -1,0 +1,6 @@
+case_id,test_company_label,domain,scenario,expected_priority,initial_requested,initial_status
+1,[TEST] ICP Signal Case 1,hrduo.com,High-fit B2B SaaS plus strong current signal,Prioritise,false,Not requested
+2,[TEST] ICP Signal Case 2,solgari.com,High-fit B2B SaaS with no meaningful current signal,Monitor,false,Not requested
+3,[TEST] ICP Signal Case 3,seatunique.com,Moderate or mixed fit plus strong current signal,Review,false,Not requested
+4,[TEST] ICP Signal Case 4,apple.com,Unambiguous poor-fit control,Exclude,false,Not requested
+5,[TEST] ICP Signal Case 5,example.com,Incomplete-evidence control,Review / Pending review,false,Not requested

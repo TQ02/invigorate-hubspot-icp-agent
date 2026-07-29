@@ -35,3 +35,9 @@
 **Decision:** Complete all repository, property, test-data and documentation work through supported connectors, then consolidate Agent Builder and `Run agent` configuration into one manual HubSpot UI checklist.
 
 **Reason:** The connected MCP does not expose agent creation, agent publication, structured Run-agent outputs or agent run history. Attempting unsupported workflow representations would be less safe than an explicit UI handoff.
+
+## D-007 — Extend the connector's generic property contract
+
+**Decision:** Expand the local guarded `create_property` MCP schema to accept HubSpot number, datetime, text, number-field and date-field property definitions.
+
+**Reason:** The API client was already generic, but its exposed tool contract allowed only boolean, enumeration and textarea definitions. The approved V1 schema could not otherwise be created through the guarded MCP. The change affects only schema compatibility; portal checks, duplicate handling and readback verification remain in force.

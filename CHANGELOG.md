@@ -12,6 +12,9 @@ All material changes to the agent, scoring rules, HubSpot properties, workflow, 
 - ICP scoring V1 with separate revenue, employee, sales-team, infrastructure, geography and business-model dimensions.
 - Signal scoring V1 with distinct relevance, personalisation, strength, freshness, reliability and clustering dimensions.
 - Fourteen test-labelled HubSpot company properties with exact `inv_ai_` internal names and verified API readback.
+- Five controlled `[TEST]` company records prepared for the regression suite.
+- Six concise Notion operating pages linked to the canonical GitHub repository.
+- A single exact HubSpot UI checklist covering the remaining AI setting, agent, workflow and runtime-test steps.
 
 ### Changed
 - Advanced build state to Phase 1.
