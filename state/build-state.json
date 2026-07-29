@@ -1,0 +1,20 @@
+{
+  "project": "Invigorate OS ICP and Signal Agent",
+  "execution_project": "hubspot-leadhub-mcp",
+  "documentation_repository": "TQ02/invigorate-hubspot-icp-agent",
+  "target_portal_name": "LeadHubAI - Demo client portal",
+  "target_portal_id": null,
+  "current_phase": 0,
+  "completed_phases": [],
+  "hubspot_assets_created": [],
+  "hubspot_assets_reused": [],
+  "test_records_created": [],
+  "notion_assets_created": [],
+  "manual_steps_required": [],
+  "blockers": [],
+  "agent_version": "1.0",
+  "icp_rules_version": "1.0",
+  "signal_rules_version": "1.0",
+  "workflow_version": "1.0",
+  "last_updated": null
+}
