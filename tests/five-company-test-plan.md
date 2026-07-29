@@ -12,9 +12,11 @@ All records must be clearly labelled `[TEST]` and use public domains suitable fo
 
 ## A. Simulation
 
-While the workflow is inactive, use HubSpot Test to verify enrollment criteria, structure, branch order, no accidental general enrollment, and anticipated paths. This simulation does not run the agent or write properties.
+Status: pending. The workflow is configured and inactive. Use HubSpot Test to verify enrollment criteria, structure, branch order, no accidental general enrollment, and anticipated paths. This simulation does not run the agent or write properties.
 
 ## B. Real execution
+
+Status: not started.
 
 Confirm every test company has requested = No. Turn on the restricted workflow. Choose **No, only enroll companies which meet the trigger criteria after turning the workflow on**. Confirm there is no other enrollment route and no existing company enrolled, then set requested = Yes only for Case 1.
 

@@ -29,15 +29,15 @@
     "agent_inbox_access": true,
     "company_research_agent_template_visible": true,
     "blank_custom_agent_enabled": false,
-    "files_data_enabled": false,
-    "run_agent_mcp_operation_available": false,
+    "files_data_enabled": true,
+    "run_agent_mcp_operation_available": true,
     "agent_builder_mcp_operation_available": false,
     "structured_outputs_documented": true,
-    "structured_outputs_portal_verified": false,
-    "existing_matching_properties": 0,
-    "existing_matching_agents": 0,
-    "existing_matching_workflows": 0,
-    "existing_test_companies": 0,
+    "structured_outputs_portal_verified": true,
+    "existing_matching_properties": 14,
+    "existing_matching_agents": 1,
+    "existing_matching_workflows": 1,
+    "existing_test_companies": 5,
     "github_write_access": true,
     "notion_write_access": true,
     "credit_balance_visible": false,
@@ -57,7 +57,10 @@
     "companies.inv_ai_agent_version",
     "companies.inv_ai_rules_version",
     "companies.inv_ai_workflow_version",
-    "companies.inv_ai_research_failure_reason"
+    "companies.inv_ai_research_failure_reason",
+    "knowledge-vault.Invigorate OS — ICP & Signal Rules V1",
+    "agent.Invigorate OS — ICP & Signal Research Agent V1",
+    "workflow.[TEST] Invigorate OS — AI ICP & Signal Prioritisation V1"
   ],
   "hubspot_assets_reused": [],
   "test_records_created": [
@@ -78,23 +81,23 @@
   "manual_steps_required": [
     {
       "id": "enable-files-data",
-      "status": "pending",
-      "reason": "HubSpot Agent Hub requires Files data to be enabled before agents can be used."
+      "status": "complete",
+      "reason": "Files data is enabled and was verified before agent publication."
     },
     {
       "id": "create-and-attach-rules-knowledge-vault",
-      "status": "pending",
-      "reason": "The approved GitHub Markdown rules must be downloaded, uploaded to Invigorate OS — ICP & Signal Rules V1, attached to the agent, and verified before publication."
+      "status": "complete",
+      "reason": "Both approved Markdown rules are in Invigorate OS — ICP & Signal Rules V1; the vault is attached and agent access is verified."
     },
     {
       "id": "configure-agent-in-ui",
-      "status": "pending",
-      "reason": "Agent Builder operations are not exposed through the connected HubSpot MCP."
+      "status": "complete",
+      "reason": "The read-only agent was configured, published and verified in Agent Builder."
     },
     {
       "id": "configure-run-agent-action-in-ui",
-      "status": "pending",
-      "reason": "The Run agent workflow action and structured outputs are not exposed through the connected HubSpot MCP."
+      "status": "complete",
+      "reason": "The native Run-agent card and output mapping were learned from HubSpot, then the exact inactive workflow was finalized and read back through the guarded MCP."
     },
     {
       "id": "simulate-inactive-workflow",
@@ -107,18 +110,7 @@
       "reason": "Runtime evidence requires turning on the restricted workflow with no-existing-record enrollment, then changing only Case 1 from requested No to Yes."
     }
   ],
-  "blockers": [
-    {
-      "id": "agent-files-data-disabled",
-      "scope": "agent execution",
-      "status": "open"
-    },
-    {
-      "id": "agent-and-run-agent-ui-only",
-      "scope": "agent and workflow configuration",
-      "status": "open"
-    }
-  ],
+  "blockers": [],
   "agent_version": "1.0",
   "icp_rules_version": "1.0",
   "signal_rules_version": "1.0",
@@ -137,8 +129,8 @@
     "notion_pages_created_and_verified": true,
     "consolidated_ui_checklist_ready": true,
     "post_write_non_test_company_changes": 0,
-    "agent_runtime_configured": false,
-    "workflow_runtime_configured": false,
+    "agent_runtime_configured": true,
+    "workflow_runtime_configured": true,
     "five_company_regression_complete": false
   },
   "current_behavior_corrections": {
@@ -151,7 +143,7 @@
     ],
     "knowledge_vault_required": true,
     "knowledge_vault_name": "Invigorate OS — ICP & Signal Rules V1",
-    "knowledge_vault_created": false,
+    "knowledge_vault_created": true,
     "approved_rule_files": [
       "config/icp-rules-v1.md",
       "config/signal-rules-v1.md"
@@ -163,6 +155,26 @@
     "real_case_1_runtime_complete": false,
     "github_documentation_corrected": true,
     "notion_summaries_corrected_and_verified": true
+  },
+  "phase_5_workflow_verification": {
+    "workflow_reused_or_created": "created-after-equivalent-search",
+    "workflow_id_public": "redacted",
+    "inactive": true,
+    "company_based": true,
+    "single_property_change_enrollment_event": true,
+    "domain_known_refinement": true,
+    "controlled_reenrollment": true,
+    "published_agent_selected": true,
+    "company_domain_input_mapped": true,
+    "structured_outputs_verified": 6,
+    "structured_output_property_mappings_verified": 6,
+    "action_count": 46,
+    "deterministic_branch_order_verified": true,
+    "completion_and_request_reset_paths": 7,
+    "failure_review_tasks": 1,
+    "test_companies_requested_no": 5,
+    "companies_requested_yes": 0,
+    "case_1_started": false
   },
   "last_updated": "2026-07-29"
 }

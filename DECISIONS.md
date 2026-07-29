@@ -32,12 +32,18 @@
 
 ## D-006 — MCP-first build with a consolidated UI handoff
 
-**Decision:** Complete all repository, property, test-data and documentation work through supported connectors, then consolidate Agent Builder and `Run agent` configuration into one manual HubSpot UI checklist.
+**Decision:** Complete all repository, property, test-data and documentation work through supported connectors, then consolidate genuinely unavailable Agent Builder steps into one manual HubSpot UI checklist.
 
-**Reason:** The connected MCP does not expose agent creation, agent publication, structured Run-agent outputs or agent run history. Attempting unsupported workflow representations would be less safe than an explicit UI handoff.
+**Reason:** Agent Builder remains a UI surface, but the later capability review demonstrated that a published agent's accepted Run-agent action, structured outputs and output references can be learned from HubSpot readback and finalized through a narrowly guarded MCP extension.
 
 ## D-007 — Extend the connector's generic property contract
 
 **Decision:** Expand the local guarded `create_property` MCP schema to accept HubSpot number, datetime, text, number-field and date-field property definitions.
 
 **Reason:** The API client was already generic, but its exposed tool contract allowed only boolean, enumeration and textarea definitions. The approved V1 schema could not otherwise be created through the guarded MCP. The change affects only schema compatibility; portal checks, duplicate handling and readback verification remain in force.
+
+## D-008 — Preserve the native Run-agent representation and fail closed
+
+**Decision:** Preserve the portal-created Run-agent action and its structured-output definition, map the company domain into the single approved input, and route a usable numeric ICP output to deterministic processing while sending missing or unusable output to the failure path.
+
+**Reason:** HubSpot's public workflow API accepts the native Run-agent action and downstream `FIELD_DATA` references but does not expose every editor-only output-definition detail in the workflow readback. Preserving the accepted action identity avoids reconstructing hidden editor state, while the exact-name, inactive-state, portal, revision, enrollment and graph validators prevent broader workflow mutation.

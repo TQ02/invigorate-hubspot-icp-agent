@@ -10,3 +10,5 @@ The system researches a company with a read-only HubSpot agent using the explici
 The AI interprets evidence. HubSpot controls CRM writes and the operational decision.
 
 GitHub is canonical, but its rule files are not automatically available to the agent. The approved Markdown files must be downloaded, uploaded to the named vault, attached and verified. Workflow Test is structural simulation only; runtime evidence requires a real restricted Case 1 enrollment.
+
+Current state: Files data is enabled; the named vault contains both approved V1 files and is attached; the agent is published; and the 46-action company workflow is complete, read back and OFF. Its six output mappings, five ordered deterministic branches, seven completion/reset paths and one failure-review task are verified. Case 1 has not started.

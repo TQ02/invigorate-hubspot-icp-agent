@@ -8,3 +8,5 @@ Canonical source: https://github.com/TQ02/invigorate-hubspot-icp-agent/blob/main
 Monthly: review five recent runs, every failure/Pending review, the attached knowledge-vault name, both approved rule files, and the stamped rules version. Quarterly: review fit assumptions, signal weights, thresholds, ownership and production readiness.
 
 Run the five-company regression after every material change. The inactive workflow Test is simulation-only and executes no actions. Runtime evidence begins with safe activation using no-existing-record enrollment and a deliberate Case 1 No-to-Yes request.
+
+Pre-runtime baseline: the inactive workflow readback verifies six output mappings, five branches in approved order, seven completion/reset paths and one failure task. All five test companies are requested = No with no completion timestamp or scores; zero companies are requested = Yes.

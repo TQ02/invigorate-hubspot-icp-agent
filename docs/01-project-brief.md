@@ -29,3 +29,11 @@ Create a native HubSpot company-research system that interprets evidence with AI
 - ICP rules: 1.0
 - Signal rules: 1.0
 - Workflow: 1.0
+
+## Deployed test state
+
+- Knowledge vault: `Invigorate OS — ICP & Signal Rules V1`, attached and verified.
+- Published agent: `Invigorate OS — ICP & Signal Research Agent V1`.
+- Inactive workflow: `[TEST] Invigorate OS — AI ICP & Signal Prioritisation V1`.
+- Five controlled companies: prepared, requested = No, not executed.
+- Next gate: inactive structural simulation, followed by controlled Case 1 activation only when runtime testing is authorized.

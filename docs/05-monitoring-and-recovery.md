@@ -17,7 +17,7 @@ Inspect:
 
 ## Alerts and review queue
 
-The workflow routes failures, low confidence, missing values and unexpected branch results to Review. A review task should be created when supported.
+The configured workflow routes failures, low confidence, missing values and unexpected branch results to Review. The agent-failure path creates one high-priority manual-review task.
 
 ## Recovery
 
@@ -32,3 +32,7 @@ The workflow routes failures, low confidence, missing values and unexpected bran
 9. Repeat the five-company regression after material changes.
 
 Never bulk-reset or re-enroll production records.
+
+## Current verification baseline
+
+Before Case 1, the workflow readback showed six output mappings, the five approved deterministic branches in order, seven current-time completion stamps, seven request resets and one failure task. All five test companies were requested = No with no completion timestamp, score or failure reason, and no company in the portal was requested = Yes.

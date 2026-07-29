@@ -1,15 +1,18 @@
 # Operational SOP
 
-## Knowledge prerequisite
+## Knowledge prerequisite — verified for V1
 
 GitHub is the canonical source for `config/icp-rules-v1.md` and `config/signal-rules-v1.md`, but those files are not automatically available to the HubSpot agent. Before publishing or republishing the agent:
 
-1. Enable Files data.
-2. Download both current approved Markdown files from GitHub.
-3. Upload them to `Invigorate OS — ICP & Signal Rules V1`.
-4. Attach that knowledge vault to `Invigorate OS — ICP & Signal Research Agent V1`.
-5. Verify the agent can access both documents.
-6. Record the vault name and rules version in private Notion.
+Files data is enabled. Both approved Markdown files are in `Invigorate OS — ICP & Signal Rules V1`; the vault is attached to `Invigorate OS — ICP & Signal Research Agent V1`; and agent access has been verified. The vault name and rules version are recorded in private Notion.
+
+Before any rule or agent update:
+
+1. Download both current approved Markdown files from GitHub.
+2. Replace the corresponding files in `Invigorate OS — ICP & Signal Rules V1`.
+3. Verify the agent can access both documents.
+4. Record the rules version in private Notion.
+5. Complete the inactive simulation and controlled regression before deployment.
 
 ## Request research
 
@@ -17,7 +20,7 @@ GitHub is the canonical source for `config/icp-rules-v1.md` and `config/signal-r
 2. Confirm a usable company domain exists.
 3. Confirm the published agent has the approved knowledge vault and rule versions.
 4. Confirm current outputs have been reviewed or intentionally superseded.
-5. Set `AI research requested` to Yes.
+5. During controlled validation, confirm the workflow was activated with no-existing-record enrollment and set `AI research requested` to Yes on one approved `[TEST]` company only.
 6. Monitor status until Complete, Pending review, or Failed.
 
 ## Interpret outcomes

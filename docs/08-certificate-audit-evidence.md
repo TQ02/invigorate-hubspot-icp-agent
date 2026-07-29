@@ -18,13 +18,13 @@ GitHub controls versions and technical truth. Approved rule files must be explic
 
 ## 5. Audit findings
 
-Phase 0 found two genuine control gaps: Files data is disabled, and Agent Builder plus Run-agent configuration are not exposed through MCP. The current-behaviour review added two further controls: GitHub files are not agent knowledge until uploaded and attached through a vault, and HubSpot's workflow Test feature is simulation-only with no executed actions.
+Phase 0 found two genuine control gaps: Files data was disabled, and the connector had no Agent Builder or Run-agent helper. Files data, the knowledge vault and the published agent are now configured. A later capability review learned HubSpot's accepted Run-agent and structured-output references from a portal-created card, added a narrowly guarded MCP finalizer, and completed the inactive workflow. Agent Builder and agent run history remain UI surfaces.
 
 ## This-week improvement
 
-The build added explicit knowledge provenance and separated inactive simulation from real runtime evidence. The real Case 1 procedure turns on the restricted workflow with no-existing-record enrollment, then deliberately changes only the test record from No to Yes. This reduces false assurance from simulated paths and prevents accidental bulk enrollment.
+The build added explicit knowledge provenance, a revision-guarded workflow finalizer and a strict separation between inactive simulation and real runtime evidence. The real Case 1 procedure turns on the restricted workflow with no-existing-record enrollment, then deliberately changes only the test record from No to Yes. This reduces false assurance from simulated paths and prevents accidental bulk enrollment.
 
-Evidence remains provisional until the agent, workflow and five-company regression are directly verified.
+The published agent and inactive workflow definition are directly verified. Evidence remains provisional until the inactive simulation, real Case 1 run, rerun safety and five-company regression are completed.
 
 ## Official current-behaviour references
 

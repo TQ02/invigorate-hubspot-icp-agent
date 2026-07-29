@@ -22,7 +22,9 @@
 - Agent instructions and tools reviewed.
 - `Invigorate OS — ICP & Signal Rules V1` contains both approved Markdown rule files and is attached to the agent.
 - Agent access to both rule documents verified before publication.
-- Property mappings reviewed.
+- Published agent name, version and company-domain input reviewed.
+- Six structured outputs and six property mappings reviewed.
+- Complete inactive workflow definition read back and validated.
 - Inactive workflow simulation completed and understood not to execute actions.
 - Real Case 1 activation uses no-existing-record enrollment and the sole deliberate request route.
 - Monitoring owner and cadence agreed.

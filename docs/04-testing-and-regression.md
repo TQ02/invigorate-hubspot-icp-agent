@@ -2,6 +2,8 @@
 
 ## A. Inactive simulation test
 
+Status: pending. The workflow is fully configured and remains inactive.
+
 1. Record expected outcomes before execution.
 2. Confirm every company is clearly labelled `[TEST]`.
 3. Keep the workflow inactive.
@@ -11,6 +13,8 @@
 HubSpot's workflow Test feature simulates the path. It does not execute the agent or actions and does not write properties. A simulation result is not runtime evidence.
 
 ## B. Real Case 1 runtime test
+
+Status: not started. Do not begin until the inactive simulation passes.
 
 1. Confirm all five test companies have requested = No.
 2. Turn on the workflow.

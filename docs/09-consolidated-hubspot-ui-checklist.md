@@ -2,56 +2,47 @@
 
 Complete this checklist only in the verified **LeadHubAI - Demo client portal**. Do not select or enroll non-test records. GitHub files are not automatically available to a HubSpot agent.
 
-## 1. Enable Files data and create the approved knowledge vault
+## 1. Verify the completed knowledge setup
 
-1. Open **Settings → AI**.
-2. Confirm generative AI and CRM data access remain enabled.
-3. Enable **Files data**.
-4. Download the current approved versions of:
+1. Open **Settings → AI** and confirm generative AI, CRM data access and **Files data** remain enabled.
+2. Confirm the current approved versions of these files are still canonical:
    - `config/icp-rules-v1.md`
    - `config/signal-rules-v1.md`
-5. Open **Agents → Agent Hub → Context → Knowledge vaults**.
-6. Click **Create vault**.
-7. Name the vault exactly `Invigorate OS — ICP & Signal Rules V1`.
-8. Upload both downloaded Markdown files and create the vault.
-9. Open the vault and verify both filenames are present and readable.
-10. Record the available credit estimate, monthly run allowance, and any per-run warning in private Notion. Do not copy account identifiers or billing details into this public repository.
+3. Open **Agents → Agent Hub → Context → Knowledge vaults**.
+4. Open `Invigorate OS — ICP & Signal Rules V1`.
+5. Verify both filenames are present and readable.
+6. Confirm the private Notion operating documentation records this vault and rules version `1.0`.
+7. Record the available credit estimate, monthly run allowance and any per-run warning in private Notion. Do not copy account identifiers or billing details into this public repository.
 
-## 2. Configure and publish the read-only agent
+## 2. Verify the published read-only agent
 
 1. Open **Agents → Agent Hub → Agents**.
-2. Start from the visible **Company Research Agent** template.
-3. Set the name to `Invigorate OS — ICP & Signal Research Agent V1`.
-4. Replace the instructions with the complete contents of `config/agent-instructions-v1.md`.
-5. Under **What this agent knows** or **Knowledge**, click **Add knowledge**.
-6. Attach `Invigorate OS — ICP & Signal Rules V1`.
-7. Open the attached vault details and verify the agent can access both `icp-rules-v1.md` and `signal-rules-v1.md` before publishing.
-8. Record the knowledge-vault name and rules version `1.0` in the private Notion operating documentation.
-9. Give the agent only company-CRM read access and permitted public-web research.
-10. Remove or disable every CRM create, update, delete, task, note, activity, contact, deal, or company write action.
-11. Confirm the agent does not assign Prioritise, Monitor, Review, or Exclude.
-12. Save and publish the agent.
-13. Re-open it and verify the name, instructions, attached vault, both rule documents, allowed tools, prohibited writes, and version `1.0`.
+2. Open the published `Invigorate OS — ICP & Signal Research Agent V1`.
+3. Verify its instructions match `config/agent-instructions-v1.md`.
+4. Verify `Invigorate OS — ICP & Signal Rules V1` is attached and both `icp-rules-v1.md` and `signal-rules-v1.md` are accessible.
+5. Verify the agent has only company-CRM read access and permitted public-web research.
+6. Confirm every CRM create, update, delete, task, note, activity, contact, deal or company write action is absent or disabled.
+7. Confirm the agent does not assign Prioritise, Monitor, Review or Exclude.
+8. Verify version `1.0`.
 
 Never assume that files stored in GitHub are directly available to the HubSpot agent. When approved rule files change, download the new canonical versions, replace or update the vault files, verify agent access, record the version, and complete the regression before deployment.
 
-## 3. Build the inactive company workflow
+## 3. Verify the completed inactive company workflow
 
-1. Open **Automation → Workflows** and create a blank company-based workflow.
-2. Name it `[TEST] Invigorate OS — AI ICP & Signal Prioritisation V1`.
-3. Leave it inactive while configuring and simulating.
-4. Set the only enrollment route to:
+1. Open **Automation → Workflows** and open `[TEST] Invigorate OS — AI ICP & Signal Prioritisation V1`.
+2. Confirm it is company-based and **OFF**.
+3. Verify the only enrollment route is:
    - `[TEST] AI research requested` is Yes; and
    - company domain is known.
-5. Enable re-enrollment only when `[TEST] AI research requested` changes from No to Yes.
-6. Add the initial actions in this order:
+4. Verify re-enrollment is permitted only when `[TEST] AI research requested` changes from No to Yes.
+5. Verify the initial actions are in this order:
    - research status = `Researching`;
    - agent version = `1.0`;
    - rules version = `1.0`;
    - workflow version = `1.0`;
    - clear research failure reason.
-7. Add **Run agent** and select `Invigorate OS — ICP & Signal Research Agent V1`.
-8. Configure these structured outputs:
+6. Verify **Run agent** selects `Invigorate OS — ICP & Signal Research Agent V1` and maps the enrolled company domain into `Domain or Company Name`.
+7. Verify these structured outputs:
 
 | Output | Type |
 |---|---|
@@ -62,10 +53,10 @@ Never assume that files stored in GitHub are directly available to the HubSpot a
 | `qualification_reasoning` | Text |
 | `research_confidence` | Number |
 
-9. Branch immediately on the Run-agent action outcome.
-10. On success, map all six outputs to the corresponding `inv_ai_` properties.
-11. Add no delay initially. Add only the smallest delay demonstrated necessary by the real Case 1 runtime test.
-12. Add deterministic success branches in this exact order:
+8. Verify usable output is routed when `icp_score > -1`; missing or unusable output goes to `AGENT FAILURE OR UNUSABLE OUTPUT`.
+9. Verify all six outputs map to the corresponding `inv_ai_` properties.
+10. Confirm there is no delay.
+11. Verify deterministic success branches in this exact order:
 
 | Order | Condition | Priority | Status |
 |---:|---|---|---|
@@ -75,21 +66,20 @@ Never assume that files stored in GitHub are directly available to the HubSpot a
 | 4 | confidence at least 60, ICP from 50 through 69 | Review | Pending review |
 | 5 | confidence at least 60, ICP below 50 | Exclude | Complete |
 
-13. Configure the Run-agent failure path:
+12. Verify the Run-agent failure path:
    - research status = `Failed`;
    - account priority = `Review`;
    - qualification reasoning = `AI research unavailable — manual review required.`;
    - failure reason = `Agent run failed or returned no usable output. Manual review required.`;
    - completed date = current time;
    - research requested = No;
-   - create a manual-review task if the action is available.
-14. Configure the none-met path:
+   - create one high-priority manual-review task.
+13. Verify the none-met path:
    - priority = `Review`;
    - status = `Pending review`;
    - failure reason = `Unexpected branch output — manual review required.`;
-   - create a manual-review task if the action is available.
-15. Close every success and none-met branch by setting completed date to current time and research requested to No.
-16. Review workflow actions, mappings, branch order, re-enrollment, and the single enrollment route. Keep the workflow inactive.
+14. Verify every success and none-met branch sets completed date to current time and research requested to No.
+15. Confirm the readback baseline: 46 actions, six output mappings, five ordered deterministic branches, seven completion/reset paths and one agent-failure review task. Keep the workflow inactive.
 
 ## 4. Run the inactive simulation test
 

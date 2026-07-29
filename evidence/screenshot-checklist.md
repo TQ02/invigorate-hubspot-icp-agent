@@ -14,9 +14,10 @@ Before publication verify that each image contains:
 Evidence targets:
 
 - portal name confirmation;
-- agent instructions and allowed tools;
-- knowledge vault name, both approved Markdown filenames, attached-agent state, and rules version;
-- structured outputs;
+- published agent instructions and allowed tools;
+- verified knowledge vault name, both approved Markdown filenames, attached-agent state and rules version;
+- six structured outputs and company-domain input mapping;
+- inactive workflow header and complete readback summary;
 - inactive workflow simulation, clearly labelled as simulation with no executed actions;
 - activation review showing no-existing-record enrollment selected and the sole enrollment route;
 - all five test companies at requested = No before activation;

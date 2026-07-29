@@ -27,17 +27,26 @@ This report is sanitized for a public repository. The target HubSpot portal ID w
 
 Existing unrelated properties and workflows were not selected for reuse because their semantics do not match the required V1 system.
 
-## Agent and workflow capability findings
+## Initial agent and workflow capability findings
 
 - Agent Hub Beta is accessible.
 - Agent Inbox is accessible.
 - The HubSpot Company Research Agent template is visible.
 - Blank custom agent creation is currently disabled in the portal UI.
-- The Agents page reports that `Files data` must be enabled in AI Settings before agents can be used.
+- The Agents page initially reported that `Files data` had to be enabled in AI Settings before agents could be used.
 - Generative AI access, CRM data access, customer conversation access, and Breeze Assistant access are enabled.
-- `Files data` is disabled.
-- The HubSpot MCP exposes CRM, property, record, and guarded workflow operations, but no Agent Builder or Run-agent configuration operation.
-- Structured workflow outputs are documented by HubSpot for the `Run agent` action, but could not be safely verified in the portal editor without beginning a UI-only configuration.
+- `Files data` was disabled at initial preflight.
+- The HubSpot MCP initially exposed CRM, property, record and guarded workflow operations, but no dedicated Agent Builder or Run-agent helper.
+- Structured workflow outputs were documented by HubSpot but had not yet been verified in this portal.
+
+## Current capability reassessment
+
+- Files data is enabled.
+- `Invigorate OS — ICP & Signal Rules V1` exists, contains both approved Markdown files, and is attached to the published agent.
+- The published agent and all six structured outputs were verified in the HubSpot editor.
+- A portal-created Run-agent card and output mapping were read through the workflow API to learn HubSpot's accepted native representation.
+- The local MCP now has a narrowly scoped finalizer for the exact inactive Invigorate workflow. It validates the portal, workflow name, company object type, inactive state, revision, sole enrollment event, domain refinement, approved agent/input, six output mappings, branch order, close-out paths and failure task before one PUT and again after readback.
+- The complete workflow was finalized and independently read back while inactive.
 
 ## Limits and subscription observations
 
@@ -65,15 +74,22 @@ Available and relevant:
 - create test tasks;
 - reset supported demo scenarios.
 
-Unsupported for this build:
+Still unsupported through MCP:
 
 - create or configure an Agent Builder agent;
 - install the Company Research Agent;
-- configure a workflow `Run agent` action;
-- configure structured Run-agent outputs;
 - publish an agent;
 - inspect agent run history through MCP.
 
+Now supported for this exact inactive workflow:
+
+- preserve and select the accepted Run-agent action;
+- map the enrolled-company domain into the approved input;
+- reference all six structured outputs in property actions;
+- finalize deterministic and failure routing;
+- stamp execution time, reset the request and create the failure-review task;
+- read back and validate the complete definition.
+
 ## Phase 0 conclusion
 
-The portal is correct and safe repository, CRM-property, and test-record work can continue. Agent execution is blocked until `Files data` is enabled, and agent plus Run-agent configuration require consolidated manual HubSpot UI steps after all automatable work is complete.
+The portal is correct. The knowledge vault, published agent and complete inactive workflow are configured. Runtime evidence remains intentionally pending: first run the inactive simulation, then use the controlled Case 1 activation procedure. No Case 1 run has begun.
