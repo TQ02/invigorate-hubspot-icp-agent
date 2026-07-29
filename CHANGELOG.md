@@ -9,6 +9,7 @@ All material changes to the agent, scoring rules, HubSpot properties, workflow, 
 - Build specification and persistent build state.
 - Sanitized Phase 0 portal, capability, asset and integration preflight.
 - Complete repository foundation for configuration, operating documentation, tests, results, evidence and Notion-ready summaries.
+- ICP scoring V1 with separate revenue, employee, sales-team, infrastructure, geography and business-model dimensions.
 
 ### Changed
 - Advanced build state to Phase 1.
