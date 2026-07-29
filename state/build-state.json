@@ -3,18 +3,78 @@
   "execution_project": "hubspot-leadhub-mcp",
   "documentation_repository": "TQ02/invigorate-hubspot-icp-agent",
   "target_portal_name": "LeadHubAI - Demo client portal",
-  "target_portal_id": null,
-  "current_phase": 0,
-  "completed_phases": [],
+  "target_portal_id": "verified-redacted",
+  "current_phase": 1,
+  "completed_phases": [
+    0
+  ],
+  "preflight": {
+    "portal_name_verified": true,
+    "portal_id_verified": true,
+    "public_portal_id": "redacted",
+    "account_type": "DEVELOPER_TEST",
+    "seats": [
+      "developer",
+      "core",
+      "sales-enterprise-trial",
+      "service-enterprise-trial"
+    ],
+    "company_read_available": true,
+    "company_write_available": true,
+    "agent_hub_access": true,
+    "agent_inbox_access": true,
+    "company_research_agent_template_visible": true,
+    "blank_custom_agent_enabled": false,
+    "files_data_enabled": false,
+    "run_agent_mcp_operation_available": false,
+    "agent_builder_mcp_operation_available": false,
+    "structured_outputs_documented": true,
+    "structured_outputs_portal_verified": false,
+    "existing_matching_properties": 0,
+    "existing_matching_agents": 0,
+    "existing_matching_workflows": 0,
+    "existing_test_companies": 0,
+    "github_write_access": true,
+    "notion_write_access": true,
+    "credit_balance_visible": false,
+    "workflow_run_agent_daily_limit_documented": 500
+  },
   "hubspot_assets_created": [],
   "hubspot_assets_reused": [],
   "test_records_created": [],
   "notion_assets_created": [],
-  "manual_steps_required": [],
-  "blockers": [],
+  "manual_steps_required": [
+    {
+      "id": "enable-files-data",
+      "status": "pending",
+      "reason": "HubSpot Agent Hub requires Files data to be enabled before agents can be used."
+    },
+    {
+      "id": "configure-agent-in-ui",
+      "status": "pending",
+      "reason": "Agent Builder operations are not exposed through the connected HubSpot MCP."
+    },
+    {
+      "id": "configure-run-agent-action-in-ui",
+      "status": "pending",
+      "reason": "The Run agent workflow action and structured outputs are not exposed through the connected HubSpot MCP."
+    }
+  ],
+  "blockers": [
+    {
+      "id": "agent-files-data-disabled",
+      "scope": "agent execution",
+      "status": "open"
+    },
+    {
+      "id": "agent-and-run-agent-ui-only",
+      "scope": "agent and workflow configuration",
+      "status": "open"
+    }
+  ],
   "agent_version": "1.0",
   "icp_rules_version": "1.0",
   "signal_rules_version": "1.0",
   "workflow_version": "1.0",
-  "last_updated": null
+  "last_updated": "2026-07-29"
 }

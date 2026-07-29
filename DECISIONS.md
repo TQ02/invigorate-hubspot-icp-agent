@@ -29,3 +29,9 @@
 **Decision:** GitHub is canonical, HubSpot is runtime, Notion is the operating layer.
 
 **Reason:** Avoid duplicated technical truth while keeping the system usable by humans.
+
+## D-006 — MCP-first build with a consolidated UI handoff
+
+**Decision:** Complete all repository, property, test-data and documentation work through supported connectors, then consolidate Agent Builder and `Run agent` configuration into one manual HubSpot UI checklist.
+
+**Reason:** The connected MCP does not expose agent creation, agent publication, structured Run-agent outputs or agent run history. Attempting unsupported workflow representations would be less safe than an explicit UI handoff.

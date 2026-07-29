@@ -17,7 +17,9 @@ The workflow will be built and tested in the **LeadHubAI - Demo client portal** 
 
 ## Current status
 
-Seeded. Preflight not yet completed.
+Phase 0 preflight complete. The correct developer-test portal, GitHub write access and Notion write access are verified. Safe repository and CRM-property work can continue.
+
+Agent execution is blocked pending one AI Settings toggle, and Agent Builder plus `Run agent` configuration are UI-only with the currently connected MCP. See `docs/00-phase-0-preflight.md`.
 
 ## Current versions
 
