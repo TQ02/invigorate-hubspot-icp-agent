@@ -4,12 +4,13 @@
   "documentation_repository": "TQ02/invigorate-hubspot-icp-agent",
   "target_portal_name": "LeadHubAI - Demo client portal",
   "target_portal_id": "verified-redacted",
-  "current_phase": 4,
+  "current_phase": 5,
   "completed_phases": [
     0,
     1,
     2,
-    3
+    3,
+    4
   ],
   "preflight": {
     "portal_name_verified": true,
@@ -42,7 +43,22 @@
     "credit_balance_visible": false,
     "workflow_run_agent_daily_limit_documented": 500
   },
-  "hubspot_assets_created": [],
+  "hubspot_assets_created": [
+    "companies.inv_ai_icp_score",
+    "companies.inv_ai_signal_score",
+    "companies.inv_ai_icp_classification",
+    "companies.inv_ai_primary_signal",
+    "companies.inv_ai_qualification_reasoning",
+    "companies.inv_ai_research_confidence",
+    "companies.inv_ai_account_priority",
+    "companies.inv_ai_research_status",
+    "companies.inv_ai_research_requested",
+    "companies.inv_ai_research_completed_date",
+    "companies.inv_ai_agent_version",
+    "companies.inv_ai_rules_version",
+    "companies.inv_ai_workflow_version",
+    "companies.inv_ai_research_failure_reason"
+  ],
   "hubspot_assets_reused": [],
   "test_records_created": [],
   "notion_assets_created": [],
@@ -79,5 +95,13 @@
   "icp_rules_version": "1.0",
   "signal_rules_version": "1.0",
   "workflow_version": "1.0",
+  "phase_4_verification": {
+    "properties_created": 14,
+    "exact_name_readback_passed": true,
+    "type_and_field_type_readback_passed": true,
+    "enum_option_readback_passed": true,
+    "test_labels_applied": true,
+    "duplicate_safe_rerun_passed": true
+  },
   "last_updated": "2026-07-29"
 }

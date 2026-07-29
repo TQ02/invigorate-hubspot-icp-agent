@@ -17,7 +17,7 @@ The workflow will be built and tested in the **LeadHubAI - Demo client portal** 
 
 ## Current status
 
-Phase 0 preflight complete. The correct developer-test portal, GitHub write access and Notion write access are verified. Safe repository and CRM-property work can continue.
+Phases 0–4 are complete. The correct developer-test portal and integrations are verified, the V1 scoring contracts are canonical, and all fourteen test-labelled HubSpot company properties exist with verified types and options.
 
 Agent execution is blocked pending one AI Settings toggle, and Agent Builder plus `Run agent` configuration are UI-only with the currently connected MCP. See `docs/00-phase-0-preflight.md`.
 
